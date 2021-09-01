@@ -54,8 +54,8 @@ else
 echo $(printf "$template" "SITE" "$SITE") >> /etc/default/telegraf
 fi
 
-wget atgfw.com/tig/sbctelegraf -O /etc/telegraf/telegraf.conf
-wget atgfw.com/tig/telegraf.service -O /etc/systemd/system//multi-user.target.wants/telegraf.service
+wget https://raw.githubusercontent.com/atgfw/monitoringscripts/main/sbctelegraf -O /etc/telegraf/telegraf.conf
+wget https://raw.githubusercontent.com/atgfw/monitoringscripts/main/telegraf.service -O /etc/systemd/system//multi-user.target.wants/telegraf.service
 
 systemctl daemon-reload
 systemctl restart telegraf
